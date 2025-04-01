@@ -11,11 +11,11 @@ OBJ_O = $(patsubst %.c,${DIR_BIN}/%.o,$(notdir ${OBJ_C}))
 
 TARGET = epd
 
-CC = gcc
+CC = g++
 
 MSG = -g -O0 -Wall
 DEBUG = -D USE_DEBUG
-STD = -std=gnu99
+STD = -std=c++11
 
 CFLAGS += $(MSG) $(DEBUG) $(STD)
 
