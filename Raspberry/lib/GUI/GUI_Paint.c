@@ -272,7 +272,7 @@ void Paint_SetColor(UWORD x, UWORD y, UWORD color)
 void Paint_GetColor(UWORD color, UBYTE* arr_color)
 {
 	UBYTE* p_color = arr_color;
-	UWORD R, G, B;
+	UBYTE R, G, B;
 
 	B = (color>>4) & 0xf0;
 	G =  color	   & 0xf0;

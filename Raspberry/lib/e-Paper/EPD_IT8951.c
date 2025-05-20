@@ -696,7 +696,7 @@ void EPD_IT8951_Clear_Refresh(IT8951_Dev_Info Dev_Info,UDOUBLE Target_Memory_Add
 {
 
     UDOUBLE ImageSize = ((Dev_Info.Panel_W * 4 % 8 == 0)? (Dev_Info.Panel_W * 4 / 8 ): (Dev_Info.Panel_W * 4 / 8 + 1)) * Dev_Info.Panel_H;
-    UBYTE* Frame_Buf = malloc (ImageSize);
+    UBYTE* Frame_Buf = (UBYTE*) malloc(ImageSize);
     memset(Frame_Buf, 0xFF, ImageSize);
 
 
