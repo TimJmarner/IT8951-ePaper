@@ -867,15 +867,14 @@ void Color_Test(IT8951_Dev_Info Dev_Info, UDOUBLE Init_Target_Memory_Addr)
 			Paint_DrawCircle(500, 500, 100, 0x0f0f, DOT_PIXEL_1X1, DRAW_FILL_FULL);
 			Paint_DrawCircle(500, 800, 100, 0x0ff0, DOT_PIXEL_1X1, DRAW_FILL_FULL);
 			
-			Paint_DrawLine(1000, 200, 1100, 200, 0x055a, 10, LINE_STYLE_SOLID);
-			Paint_DrawLine(1000, 300, 1100, 300, 0x05a5, 20, LINE_STYLE_SOLID);
-			Paint_DrawLine(1000, 400, 1100, 400, 0x0a55, 30, LINE_STYLE_SOLID);
+			Paint_DrawLine(1000, 200, 1100, 200, 0x055a, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
+			Paint_DrawLine(1000, 300, 1100, 300, 0x05a5, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
+			Paint_DrawLine(1000, 400, 1100, 400, 0x0a55, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
 
 			Paint_DrawString_EN(1000, 500, "Hello, World!", &Font24, 0x0aa5, 0x0fff);
 			Paint_DrawString_EN(1000, 600, "Hello, World!", &Font24, 0x0a5a, 0x0fff);
 			Paint_DrawString_EN(1000, 700, "Hello, World!", &Font24, 0x05aa, 0x0fff);
 
-			Paint_DrawString_CN(700, 400, "��� ΢ѩ����", &Font24CN, 0x00fa, 0x0000);
 			Paint_DrawNum(700, 500, 123456789, &Font24, 0x0a0f, 0x0fff);
 			Paint_DrawTime(700, 600, &Time, &Font24, 0x0fa0, 0x0fff);
 		}else {
