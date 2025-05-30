@@ -423,3 +423,41 @@ UBYTE GUI_ReadBmp(const char *path, UWORD x, UWORD y)
 	fclose(fp);
 	return(0);
 }
+
+BMPINFOHEADER GUI_GetBMPInfo(const char *path)
+{
+	//bmp file pointer
+	FILE *fp;
+	BMPFILEHEADER FileHead;
+	BMPINFOHEADER InfoHead;
+	UDOUBLE ret = -1;
+	
+	fp = fopen(path,"rb");
+	if (fp == NULL)
+	{
+		Debug("File does not exist!");
+	}
+
+	ret = fread(&FileHead, sizeof(BMPFILEHEADER),1, fp);
+	if (ret != 1)
+	{
+		Debug("Read header error!\n");
+		fclose(fp);
+	}
+
+	//Detect if it is a bmp image, since BMP file type is "BM"(0x4D42)
+	if (FileHead.bType != 0x4D42)
+	{
+		Debug("It's not a BMP file\n");
+		fclose(fp);
+	}
+
+	ret = fread((char *)&InfoHead, sizeof(BMPINFOHEADER), 1, fp);
+	if (ret != 1)
+	{
+		Debug("Read infoheader error!\n");
+		fclose(fp);
+	}
+		
+	return InfoHead;
+}
