@@ -277,7 +277,7 @@ void Paint_GetColor(UWORD color, UBYTE* arr_color)
 	B = (color>>4) & 0xf0;
 	G =  color	   & 0xf0;
 	R = (color<<4) & 0xf0;
-	UBYTE temp[9] = {G, G, G/2, B, B, B/2, R, R, R/2};
+	UBYTE temp[9] = {G, G, (UBYTE)(G/2), B, B, (UBYTE)(B/2), R, R, (UBYTE)(R/2)};
 	
 	for(UBYTE t=0; t<9; t++) {
 		p_color[t] = temp[t];
