@@ -297,7 +297,7 @@ static void EPD_IT8951_SetVCOM(UWORD VCOM)
 function :	Cmd10 LD_IMG
 parameter:  
 ******************************************************************************/
-static void EPD_IT8951_LoadImgStart( IT8951_Load_Img_Info* Load_Img_Info )
+static void __attribute__((unused)) EPD_IT8951_LoadImgStart( IT8951_Load_Img_Info* Load_Img_Info )
 {
     UWORD Args;
     Args = (\
