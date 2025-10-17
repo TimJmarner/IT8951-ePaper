@@ -11,6 +11,20 @@
                 "_UNICODE"
             ],
             "intelliSenseMode": "msvc-x64"
+        },
+		{
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include/freetype2"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "intelliSenseMode": "msvc-x64",
+            "compilerPath": "/usr/bin/g++"
         }
     ],
     "version": 4
